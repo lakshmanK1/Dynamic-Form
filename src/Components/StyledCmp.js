@@ -34,4 +34,6 @@ padding: 2rem; text-align: center;`;
 
 export const Span = styled.span``;
 
+export const DeleteBtn = styled.button`background-color:red; color:white; padding:7px; border:none;
+margin-left:25px;`;
 

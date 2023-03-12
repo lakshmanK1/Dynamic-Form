@@ -1,5 +1,5 @@
 import React from 'react'
-import { Span, ListDiv, DataListDiv } from './StyledCmp'
+import { Span, ListDiv, DataListDiv, DeleteBtn } from './StyledCmp'
 
 function DataList(props) {
   return (
@@ -12,6 +12,7 @@ function DataList(props) {
                         <Span>Name: {item.name} --- </Span>
                         <Span>Email: {item.email} --- </Span>
                         <Span>Select: {item.select}</Span>
+                        <DeleteBtn onClick={()=>props.deleteItem(item.id)}>X</DeleteBtn>
                     </ListDiv>
                     );
                 })

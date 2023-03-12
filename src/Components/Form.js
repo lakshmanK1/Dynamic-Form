@@ -14,9 +14,9 @@ const [formDataArr, setFormDataArr] = useState([{
 
   const FormSubmit = (e) => {
     e.preventDefault();
-    const enteredName = nameInput.current.value;
-    const enteredEmail = emailInput.current.value;
-    const enteredSelect = selectInput.current.value;
+    let enteredName = nameInput.current.value;
+    let enteredEmail = emailInput.current.value;
+    let enteredSelect = selectInput.current.value;
 
     const finalData = {
       id:uuidv4(),
@@ -27,6 +27,15 @@ const [formDataArr, setFormDataArr] = useState([{
 
     setFormDataArr([finalData,...formDataArr]);
 
+    nameInput.current.value = ' ';
+    emailInput.current.value = ' ';
+    selectInput.current.value = ' ';
+
+   }
+
+   const DeleteData = (id) => {
+    let filteredData = formDataArr.filter( item => item.id !== id);
+    setFormDataArr(filteredData);
    }
 
 
@@ -47,7 +56,7 @@ const [formDataArr, setFormDataArr] = useState([{
         </Select><br/>
         <Button type='submit'>SUBMIT</Button>
         </Form>
-        <DataList data={formDataArr}/>
+        <DataList data={formDataArr} deleteItem={DeleteData}/>
       </FormDiv>
     </MainDiv>
   )
