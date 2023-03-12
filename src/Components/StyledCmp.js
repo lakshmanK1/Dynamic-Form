@@ -26,11 +26,12 @@ background-color: #2192FF; border: 1px solid white; margin:10px; border-radius: 
 
 // DataList
 
-export const DataListDiv = styled.div`box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
- height:300px; padding:20px;`;
+export const DataListDiv = styled.div``;
 
 export const ListDiv = styled.div`margin: 3rem auto; width:70%;
 border-radius: 6px; background-color: #EEEEEE; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 padding: 2rem; text-align: center;`;
 
 export const Span = styled.span``;
+
+

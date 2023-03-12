@@ -9,8 +9,8 @@ function DataList(props) {
                 props.data.map((item)=>{
                     return(
                     <ListDiv key={item.id}>
-                        <Span>Name: {item.name}</Span>
-                        <Span>Email: {item.email}</Span>
+                        <Span>Name: {item.name} --- </Span>
+                        <Span>Email: {item.email} --- </Span>
                         <Span>Select: {item.select}</Span>
                     </ListDiv>
                     );
