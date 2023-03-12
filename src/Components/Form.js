@@ -27,6 +27,18 @@ const [formDataArr, setFormDataArr] = useState([{
 
     setFormDataArr([finalData,...formDataArr]);
 
+    fetch('https://crudcrud.com/api/ab682b9869bd4d599d801cf0a26cbc4d/FormData', {
+      method:'POST',
+      body:JSON.stringify({
+        name:enteredName,
+        email:enteredEmail,
+        select:enteredSelect
+      }),
+      headers:{
+        "Content-Type" : "application/json"
+      }
+    })
+
     nameInput.current.value = ' ';
     emailInput.current.value = ' ';
     selectInput.current.value = ' ';
